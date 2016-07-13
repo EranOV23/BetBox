@@ -1,0 +1,66 @@
+*{
+	background: #155123;
+	color: #f2f2f2;
+}
+
+body{
+
+}
+
+.header{
+	margin-top: 5%;
+	margin-bottom: 5%;
+	border-bottom-style: solid;
+
+}
+
+.btn{
+	margin-top: 3px;
+	margin-bottom: 2px;
+}
+
+.Suggestion{
+    border-bottom-style: dashed;
+    border-width: 2px;
+    margin-bottom: 5%;
+}
+
+/*.comments{
+	border-top-style: dashed;
+    border-width: 2px;
+    margin-top: 5%;
+}
+*/
+
+.post{
+	border-bottom-style: dashed;
+    border-width: 2px;
+    margin-bottom: 2%;
+
+}
+
+.bet{
+	color: #337ab7;
+	display: inline;
+}
+
+#back{
+	background-color: white;
+	border-color: white;
+	color: #155123;
+	display: inline;
+}
+#back:hover{
+	background-color: gray;
+	border-color: gray;
+}
+a{
+	color: white;
+}
+a:hover{
+	text-decoration: none !important;
+}
+
+.form-control{
+	margin-bottom: 2px;
+}
