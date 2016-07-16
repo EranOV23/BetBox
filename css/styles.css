@@ -8,11 +8,10 @@ body{
 }
 
 .header{
-	margin-top: 5%;
-	margin-bottom: 5%;
 	border-bottom-style: solid;
-
 }
+	.header #img1{ display: block;}
+	.header #img2{ display: none;}
 
 .btn{
 	margin-top: 3px;
@@ -22,7 +21,8 @@ body{
 .Suggestion{
     border-bottom-style: dashed;
     border-width: 2px;
-    margin-bottom: 5%;
+    margin: 5%;
+
 }
 
 /*.comments{
@@ -63,4 +63,12 @@ a:hover{
 
 .form-control{
 	margin-bottom: 2px;
+}
+
+/*mobile*/
+@media (max-width:480px){
+
+	.header #img1{ display: none;}
+	.header #img2{ display: block;}
+
 }
