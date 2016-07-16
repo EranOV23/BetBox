@@ -18,25 +18,19 @@ body{
 	margin-bottom: 2px;
 }
 
-.Suggestion{
+.Suggestion, .post, .comments{
     border-bottom-style: dashed;
     border-width: 2px;
     margin: 5%;
 
 }
 
-/*.comments{
-	border-top-style: dashed;
-    border-width: 2px;
-    margin-top: 5%;
+form{
+	margin: 0 5% 0 5%;
 }
-*/
-
-.post{
-	border-bottom-style: dashed;
-    border-width: 2px;
-    margin-bottom: 2%;
-
+.form-control{
+	margin: 2px 0 2px 0;
+	width: 75%;
 }
 
 .bet{
@@ -61,9 +55,6 @@ a:hover{
 	text-decoration: none !important;
 }
 
-.form-control{
-	margin-bottom: 2px;
-}
 
 /*mobile*/
 @media (max-width:480px){
