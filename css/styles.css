@@ -1,3 +1,5 @@
+/* General */
+
 *{
 	background: #404040;
 	color: #f2f2f2;
@@ -5,7 +7,40 @@
 
 body{
 	margin: 5% 10% 5% 10%;
+	background-color: #404040
 }
+
+/* Homepage */
+
+/* Header */
+.nav{
+	background-color: white;
+	color: #404040;
+	width: 100%;
+	position: fixed;
+	margin: -5% -10% -5% -10%;
+	display: -webkit-box;
+	z-index: 1;
+}
+#search{
+	width: 20%;
+	margin-left: 10%;
+}
+
+.nav a {
+	margin-left: 1em;
+	display: inline;
+	position: relative;
+	left: 450%;
+
+}
+
+#Register{
+	color: #404040;
+	background-color: white;
+	text-decoration: none !important;
+}
+
 
 .header{
 	border-bottom-style: solid;
@@ -25,12 +60,18 @@ body{
 
 }
 
+/* Bets page */
+
 form{
 	margin: 0 5% 0 5%;
 }
 .form-control{
 	margin: 2px 0 2px 0;
 	width: 75%;
+}
+
+#bet{
+	width: 30%;
 }
 
 .bet{
@@ -59,7 +100,8 @@ a:hover{
 /*mobile*/
 @media (max-width:480px){
 
+	.nav a{ left: 1em;}
 	.header #img1{ display: none;}
-	.header #img2{ display: block;}
+	.header #img2{ display: block; margin-top: 10%;}
 
 }
