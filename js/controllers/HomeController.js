@@ -23,16 +23,16 @@ app.controller('HomeController',
 	 		});
 	 		
 	 		//after submit, clear input
-	 		$scope.title='';
+	 		$scope.title = '';
  			$scope.bet = '';
 
 
 	 	};
 
-	 		//add +1 to suggestion
-			$scope.upVote = function(post) {              
-			post.upvotes += 1;          
-			}; 
+	 	//add +1 to suggestion
+		$scope.upVote = function(post) {              
+		post.upvotes += 1;          
+		}; 
 
 
 }]);
