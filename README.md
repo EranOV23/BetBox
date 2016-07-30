@@ -5,6 +5,7 @@ You and your friends could suggest things to bet on, comment and rank the sugges
 
 I currently work on setting Realtime database and Authentication using Firebase. 
 
-Technologies used: HTML&CSS, AngularJs, Bootstrap. 
+Technologies used: HTML&CSS, AngularJs, Bootstrap, Firebase.
 
-For view the code live you'll need to run a local server. One way for doing it, is  to run simple HTTP Server with Python using "$ python -m SimpleHTTPServer" and visiting your local host: http://localhost:8000/.
+For view the code live you can vist this URL:
+http://eranov.com/Betbox_fire/public/#/
