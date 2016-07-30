@@ -1,4 +1,4 @@
-var app = angular.module('SuggestionBox', ['ngRoute']);
+var app = angular.module('SuggestionBox', ['ngRoute','firebase']);
 
 app.config(function($routeProvider) {
   $routeProvider
