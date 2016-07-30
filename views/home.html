@@ -1,24 +1,29 @@
-<!-- Posts list -->
-<div class="Suggestion" ng-repeat="post in posts | filter:search | orderBy:'-upvotes'";>
-	
-	<h4> {{post.title}} </h4>
-	<h5>I bet: <div class="bet">{{post.bet}}</div></h5>
-	<p>Odds: {{post.odds}}</p>
-	<p>
-		<span class="glyphicon glyphicon-plus-sign" ng-click="upVote(post)"></span>
-			Upvotes: {{post.upvotes}} | <a href="#/suggestion/{{ post.id }}"><button class="btn btn-primary"> Bet</button></a>
-	</p>
- </div>
-
-<!-- Add new post -->
-<form ng-submit="addSuggestion()" style="margin-top: 50px">
-	
-	<h3> Have an idea for bet?</h3>
-
-	<div class="form-group">
-		<input type="text" class="form-control" placeholder="Title: your bet subject" ng-model="title"></input>
-		<input type="text" class="form-control" placeholder="Bet: we are beting on..." ng-model="bet"></input>
+	<div class="post" >
+		<h3 >{{post.title}}</h3>
+		<h4> I bet: <span class="bet">{{post.bet}}</span></h4>
+		<h5>Odds: {{post.odds}}</h4>
 	</div>
 
-	<button type="submit" class="btn btn-primary">Suggest</button>
-</form>
+	<div class="comments" ng-repeat="comment in post.comments">
+	   	<span>{{comment.body}}</span>
+	    	<p>
+				<span class="glyphicon glyphicon-plus-sign" ng-click="userBet(comment)">
+				</span>	myBet: {{comment.userBet | currency : symbol}}
+			</p>
+	</div>
+
+		<form ng-submit="addComment()" style="margin-top: 50px">
+			 	<h3> Submit your bet </h3>
+ 				<div class="form-group">
+ 					<input type="text" class="form-control" id="bet" placeholder="have something in mind?" ng-model="body"></input> 					 				
+ 					<input type="number" class="form-control" id ="bet" placeholder="bet for..." ng-model="mybet"></input>
+
+ 				</div>
+
+ 				 <button type="submit" class="btn btn-primary">Bet now</button>
+			<span class="back">
+				<a href="#/home">
+					<button class="btn btn-primary" id="back">Back</button>
+				</a>
+			</span> 				 
+		</form>
