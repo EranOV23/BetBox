@@ -7,5 +7,5 @@ I currently work on setting Realtime database and Authentication using Firebase.
 
 Technologies used: HTML&CSS, AngularJs, Bootstrap, Firebase.
 
-For view the code live you can vist this URL:
+You can visit this URL to view the code live:
 http://eranov.com/Betbox_fire/public/#/
