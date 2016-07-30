@@ -7,23 +7,20 @@
 	<div class="comments" ng-repeat="comment in post.comments">
 	   	<span>{{comment.body}}</span>
 	    	<p>
-				<span class="glyphicon glyphicon-plus-sign" ng-click="userBet(comment)">
-				</span>	myBet: {{comment.userBet | currency : symbol}}
-			</p>
+			<span class="glyphicon glyphicon-plus-sign" ng-click="userBet(comment)">
+			</span>	myBet: {{comment.userBet | currency : symbol}}
+		</p>
 	</div>
 
-		<form ng-submit="addComment()" style="margin-top: 50px">
-			 	<h3> Submit your bet </h3>
- 				<div class="form-group">
- 					<input type="text" class="form-control" id="bet" placeholder="have something in mind?" ng-model="body"></input> 					 				
- 					<input type="number" class="form-control" id ="bet" placeholder="bet for..." ng-model="mybet"></input>
+	<form ng-submit="addComment()" style="margin-top: 50px">
+	 	<h3> Submit your bet </h3>
+ 		<div class="form-group">
+ 			<input type="text" class="form-control" id="bet" placeholder="have something in mind?" ng-model="body"></input> 					 				
+ 			<input type="number" class="form-control" id ="bet" placeholder="bet for..." ng-model="mybet"></input>
 
- 				</div>
-
- 				 <button type="submit" class="btn btn-primary">Bet now</button>
-			<span class="back">
-				<a href="#/home">
-					<button class="btn btn-primary" id="back">Back</button>
-				</a>
-			</span> 				 
-		</form>
+ 		</div>
+ 		<button type="submit" class="btn btn-primary">Bet now</button>
+		<span class="back">
+		<a href="#/home"><button class="btn btn-primary" id="back">Back</button></a>
+		</span>
+	</form>
