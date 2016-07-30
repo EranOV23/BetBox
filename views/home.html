@@ -1,4 +1,6 @@
-<div class="Suggestion" ng-repeat="post in posts | orderBy:'-upvotes' ";>
+<!-- Posts list -->
+<div class="Suggestion" ng-repeat="post in posts | filter:search | orderBy:'-upvotes'";>
+	
 	<h4> {{post.title}} </h4>
 	<h5>I bet: <div class="bet">{{post.bet}}</div></h5>
 	<p>Odds: {{post.odds}}</p>
@@ -8,12 +10,15 @@
 	</p>
  </div>
 
- <form ng-submit="addSuggestion()" style="margin-top: 50px">
- 	<h3> Have an idea for bet?</h3>
- 	<div class="form-group">
- 		<input type="text" class="form-control" placeholder="Title: your bet subject" ng-model="title"></input>
- 		<input type="text" class="form-control" placeholder="Bet: we are beting on..." ng-model="bet"></input>
+<!-- Add new post -->
+<form ng-submit="addSuggestion()" style="margin-top: 50px">
+	
+	<h3> Have an idea for bet?</h3>
 
- 	</div>
- 	<button type="submit" class="btn btn-primary">Suggest</button>
- </form>
+	<div class="form-group">
+		<input type="text" class="form-control" placeholder="Title: your bet subject" ng-model="title"></input>
+		<input type="text" class="form-control" placeholder="Bet: we are beting on..." ng-model="bet"></input>
+	</div>
+
+	<button type="submit" class="btn btn-primary">Suggest</button>
+</form>
