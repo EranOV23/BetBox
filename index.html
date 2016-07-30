@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>CrazyBet</title>
-<script type="text/javascript" src="js/vendor/angular.min.js"></script>
-<script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script>
-<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<title>BetBox</title> 
+	<!-- AngularJS -->
+	<script type="text/javascript" src="js/vendor/angular.min.js"></script>
+	<script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script>
+
+	<!-- Bootstrap -->
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
 </head>
 
 <body ng-app="SuggestionBox">
+	<div class="nav">
+		<input class="form-control" id="search" type = "text" placeholder="search..." ng-model="search">
+		<a href=""><span id="Register">Register</span></a>
+		<a href=""><button class="btn">Login</button></a>
+	</div>
 	<div class="row">
-	     	<div class="header">
-	     	<img id="img1" ng-src="img/logo.png" alt="Description" />
-	       	<img id="img2" ng-src="img/logo_mobile.png" alt="Description" />
-	     	<P>Bet live on the craziest things with the highest winning odds</P>
-		</div>
-			<div ng-view></div>
-		</div>
+ 	<div class="header">
+ 		<img id="img1" ng-src="img/logo.png" alt="Description" />
+   		<img id="img2" ng-src="img/logo_mobile.png" alt="Description" />
+ 		<P>Bet live on the craziest things with the highest winning odds</P>
+
+	</div>
+	<div ng-view></div>
 	</div>
 
 
@@ -28,9 +39,27 @@
 <script type="text/javascript" src="js/controllers/SuggestionController.js"></script>
  
 <!-- Services -->
-<script type="text/javascript" src="js/services/suggestions.js"></script>
+<script type="text/javascript" src="js/services/firebase_suggestions.js"></script>
 
- 
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCk14twePCLtwxbuUsVxVvfggt-VygHIO4",
+    authDomain: "betbox-e4d27.firebaseapp.com",
+    databaseURL: "https://betbox-e4d27.firebaseio.com",
+    storageBucket: "betbox-e4d27.appspot.com",
+  };
+  firebase.initializeApp(config);
+
+  var database = firebase.database();
+</script>
+
+
 </body>
 </html>
 
